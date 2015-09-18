@@ -49,12 +49,42 @@ This file contains a number of front-end interview questions that can be used wh
 #### HTML Questions:
 
 * What does a `doctype` do?
+* The doctype declaration should be the very first thing in an HTML document, before the tag. The doctype declaration is not an HTML tag; it is an instruction to the web browser about what version of the markup language the page is written in. The doctype declaration refers to a Document Type Definition (DTD)
+* 
+
+
+    When performing HTML validation testing on a web page it tells the HTML (HyperText Markup Language) validator which version of (X)HTML standard the web page coding is supposed to comply with. When you validate your web page the HTML validator checks the coding against the applicable standard then reports which portions of the coding do not pass HTML validation (are not compliant).
+
+    It tells the browser how to render the page in standards compliant mode.
+
+
 * What's the difference between standards mode and quirks mode?
 * What's the difference between HTML and XHTML?
+* 
+    XHTML stands for EXtensible HyperText Markup Language
+    XHTML is almost identical to HTML
+    XHTML is stricter than HTML
+    XHTML is HTML defined as an XML application
+    XHTML is supported by all major browsers
+
+
 * Are there any problems with serving pages as `application/xhtml+xml`?
+* User A downloads your page with Firefox, and gets a XHTML/XML Content-Type. The user's ISP has a proxy server between the user and your site, so this page is now cached.
+
+User B, same ISP, requests your page using Internet Explorer. The request hits the proxy first, the proxy says "hey, I have that page, here it is; as application/xhtml+xml". User B is prompted to download the file (as IE will download anything sent as application/xhtml+xml
+
+Use vary field to fix
+
+
 * How do you serve a page with content in multiple languages?
+* 
+
 * What kind of things must you be wary of when design or developing for multilingual sites?
+* 
+
 * What are `data-` attributes good for?
+* 
+
 * Consider HTML5 as an open web platform. What are the building blocks of HTML5?
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
 * Describe the difference between `<script>`, `<script async>` and `<script defer>`.
